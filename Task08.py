@@ -12,6 +12,7 @@ def get_random_money(quan):
             count1+=1
         else:
             count0+=1
-    print(f'\nНужно перевенуть {count0} монет' if count0 < count1 else f'Нужно перевернуть {count1} монет')
+    print()
+    print(f'Нужно перевенуть {count0} монет' if count0 < count1 else f'Нужно перевернуть {count1} монет')
 
 get_random_money(quan_money)
