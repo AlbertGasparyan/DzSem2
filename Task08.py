@@ -1,13 +1,17 @@
-from random import random, randint
 
 
 quan_money = int(input("Введите кол-во монет:"))
 
-def GetListMoney(number):
-    list_money = []
+def get_random_money(quan):
+    count0, count1 = 0, 0
     for el in range(quan_money):
-        list_money.append(randint(0,1))
-    return print(list_money)
+        import random
+        coin=random.randint(0,1)
+        print(coin,end=' ')
+        if coin>0:
+            count1+=1
+        else:
+            count0+=1
+    print(f'\nНужно перевенуть {count0} монет' if count0 < count1 else f'Нужно перевернуть {count1} монет')
 
-ListMoney= GetListMoney(quan_money)
-
+get_random_money(quan_money)
